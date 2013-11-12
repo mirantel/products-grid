@@ -1,0 +1,11 @@
+{
+  "name": "FrontendMinimalSet",
+  "version": "0.1.0",
+  "description": "Version by 12.11.13",
+  "private": true,
+  "devDependencies": {
+    "grunt-contrib-stylus": "~0.10.0",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt": "~0.4.1"
+  }
+}
