@@ -11,7 +11,7 @@
 <body>
 	<div class="wrap cf">
 		<div class="main">
-			<ul class="products">
+			<ul class="products products_info_center products_col_2">
 				<li class="product">
 					<div class="product__img">
 						<img src="http://s7d5.scene7.com/is/image/CanadianTire/ctdc-2013-fall-playing-hockey-bitty-product001?wid=186&hei=268&fmt=png-alpha" alt="" />
@@ -32,7 +32,7 @@
 					</div>
 				</li>
 
-				<li class="product product_left_new-line">
+				<li class="product">
 					<div class="product__img">
 						<img src="http://s7d5.scene7.com/is/image/CanadianTire/ctdc-2013-fall-playing-hockey-bitty-product003?wid=356&hei=742&fmt=png-alpha" alt="" />
 					</div>
@@ -47,7 +47,7 @@
 						<img src="http://s7d5.scene7.com/is/image/CanadianTire/ctdc-2013-fall-playing-hockey-bitty-product004?wid=135&hei=179&fmt=png-alpha" alt="" />
 					</div>
 					<div class="product__info product__info_center">
-						<div class="product__name">Nike Team Canada Jersey, Adult</div>
+						<div class="product__name">Nike Team Canada Jersey, Adult Nike Team Canada Jersey, Adult</div>
 						<div class="product__price"> From $79.99 </div>
 					</div>
 				</li>
@@ -62,7 +62,7 @@
 					</div>
 				</li>
 
-				<li class="product product_right">
+				<li class="product">
 					<div class="product__img">
 						<img src="http://s7d5.scene7.com/is/image/CanadianTire/ctdc-2013-fall-playing-hockey-bitty-product006?wid=171&hei=240&fmt=png-alpha" alt="" />
 					</div>
@@ -89,31 +89,42 @@
 				<div class="row">
 					<h3>Column number</h3>
 					<div class="col">
-						<label for="column-num-1">1</label>
-						<input type="radio" name="column-num" class="column-num" id="column-num-1" value="col_1">
+						<label for="radio_col_1">1</label>
+						<input type="radio" name="column-num" class="radio_col" id="radio_col_1" value="col_1">
 					</div>
 					<div class="col">
-						<label for="column-num-2">2</label>
-						<input type="radio" name="column-num" class="column-num" id="column-num-2" value="col_2">
+						<label for="radio_col_2">2</label>
+						<input type="radio" name="column-num" class="radio_col" id="radio_col_2" value="col_2" checked="checked">
 					</div>
 					<div class="col">
-						<label for="column-num-3">3</label>
-						<input type="radio" name="column-num" class = "column-num" id="column-num-3" value="col_3">
+						<label for="radio_col_3">3</label>
+						<input type="radio" name="column-num" class="radio_col" id="radio_col_3" value="col_3">
 					</div>
 				</div>
 				<div class="row">
-					<h3>Text align</h3>
+					<h3>Info text align</h3>
 					<div class="col">
-						<label for="">left</label>
-						<input type="radio" name="taxt-align">
+						<label for="radio_info_left">left</label>
+						<input type="radio" name="info-align" class="radio_info" id="radio_info_left" value="info_left">
 					</div>
 					<div class="col">
-						<label for="">reght</label>
-						<input type="radio" name="taxt-align">
+						<label for="radio_info_right">right</label>
+						<input type="radio" name="info-align" class="radio_info" id="radio_info_right" value="info_right">
 					</div>
 					<div class="col">
-						<label for="">center</label>
-						<input type="radio" name="taxt-align">
+						<label for="radio_info_center">center</label>
+						<input type="radio" name="info-align" class="radio_info" id="radio_info_center" value="info_center">
+					</div>
+				</div>
+				<div class="row">
+					<h3>Info text above or below</h3>
+					<div class="col">
+						<label for="radio_info_above">above</label>
+						<input type="radio" name="info-vertical" class="radio_info_vertical" id="radio_info_above" value="info_above">
+					</div>
+					<div class="col">
+						<label for="radio_info_below">below</label>
+						<input type="radio" name="info-vertical" class="radio_info_vertical" id="radio_info_below" value="info_below">
 					</div>
 				</div>
 				<div class="row">
