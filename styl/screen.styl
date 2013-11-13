@@ -124,6 +124,77 @@ html{
   }
 }
 
+.products_2_plus_1{
+  .product:nth-child(4n+1),
+  .product:nth-child(4n+4){
+    width: 66%;
+  }
+  .product:nth-child(4n+2),
+  .product:nth-child(4n+3){
+    width: 33%;
+  }
+  .product__img{
+    height: 165px;
+    line-height: 165px;
+    img{
+      max-height: 165px;
+      vertical-align: bottom;
+    }
+  }
+}
+
+.product_steps{
+  .product{
+    float: left;
+  }
+  &.products_col_2{
+    .product:nth-child(2){
+      margin-top: 200px;
+    }
+    .product:nth-child(2n+2){
+      float: right;
+    }
+    .product__img{
+      height: 265px;
+      line-height: 265px;
+      img{
+        max-height: 265px;
+        vertical-align: bottom;
+      }
+    }
+  }
+  &.products_col_3{
+    .product:nth-child(1){
+      margin-top: 0;
+    }
+    .product:nth-child(2){
+      margin-top: 122px;
+    }
+    .product:nth-child(3n+4),
+    .product:nth-child(3n+6){
+      margin-top: -122px;
+    }
+    .product:nth-child(3n+2){
+      float: none;
+    }
+    .product:nth-child(3n+3){
+      float: right;
+    }
+    .product:nth-child(3){
+      margin-top: 289px;
+    }
+    .product__img{
+      height: 165px;
+      line-height: 165px;
+      img{
+        max-height: 165px;
+        vertical-align: bottom;
+      }
+    }
+  }
+}
+
+
 .products_img_cell{
   &.products_col_2{
     .product__img{
@@ -151,6 +222,9 @@ html{
   .product{
     float: left;
   }
+  .product:nth-child(3n+4){
+    float: right;
+  }
   .product__img{
     img{
       max-height: 100%;
@@ -158,12 +232,12 @@ html{
     }
   }
   &.products_col_2{
-    .product__img{
+    .product__img,
+    .product:nth-child(3n+1):last-child .product__img{
       height: 265px;
       line-height: 265px;
     }
     .product:nth-child(3n+1){
-      height: $h_2*2 + $h_gap + $h_text_hold*2;
       .product__img{
         height: $h_2*2 + $h_gap + $h_text_hold;
         line-height: $h_2*2 + $h_gap + $h_text_hold;
@@ -171,17 +245,20 @@ html{
     }
   }
   &.products_col_3{
-    .product__img{
+    .product__img,
+    .product:nth-child(3n+1):last-child .product__img{
       height: 165px;
       line-height: 165px;
     }
-    .product:nth-child(4n+1){
-      height: $h_3*3 + $h_gap*2 + $h_text_hold*3;
+    .product:nth-child(3n+1){
       width: 66%;
       .product__img{
-        height: $h_3*3 + $h_gap*2 + $h_text_hold;
-        line-height: $h_3*3 + $h_gap*2 + $h_text_hold;
+        height: $h_3*2 + $h_gap + $h_text_hold;
+        line-height: $h_3*2 + $h_gap + $h_text_hold;
       }
     }
+  }
+  .product:nth-child(3n+1):last-child{
+    width 100%
   }
 }
