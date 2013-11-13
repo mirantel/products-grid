@@ -11,7 +11,7 @@
 <body>
 	<div class="wrap cf">
 		<div class="main">
-			<ul class="products products_info_center products_col_2 product_rhomb">
+			<ul class="products products_info_center products_col_2">
 				<li class="product">
 					<div class="product__img">
 						<img src="http://s7d5.scene7.com/is/image/CanadianTire/ctdc-2013-fall-playing-hockey-bitty-product001?wid=186&hei=268&fmt=png-alpha" alt="" />
@@ -120,20 +120,35 @@
 					<h3>Info text above or below</h3>
 					<div class="col">
 						<label for="radio_info_above">above</label>
-						<input type="radio" name="info-vertical" class="radio_info_vertical" id="radio_info_above" value="info_above">
+						<input type="radio" name="info-vert" class="radio_info_vertical" id="radio_info_above" value="info_above">
 					</div>
 					<div class="col">
 						<label for="radio_info_below">below</label>
-						<input type="radio" name="info-vertical" class="radio_info_vertical" id="radio_info_below" value="info_below">
+						<input type="radio" name="info-vert" class="radio_info_vertical" id="radio_info_below" value="info_below">
 					</div>
 				</div>
 				<div class="row">
-					<label for="">Type of layout</label>
-					<select name="" id="">
-						<option value="">kletka</option>
-						<option value="">vse na levo</option>
-						<option value=""></option>
-					</select>
+					<h3>Grid types (IE9+)</h3>
+					<div class="col">
+						<label for="radio_grid_1">big_little (2 and 3 cols)</label>
+						<input type="radio" name="grid" class="radio_grid_type" id="radio_grid_1" value="big_little">
+					</div>
+					<div class="col">
+						<label for="radio_grid_2">2_plus_1</label>
+						<input type="radio" name="grid" class="radio_grid_type" id="radio_grid_2" value="2_plus_1">
+					</div>
+					<div class="col">
+						<label for="radio_grid_3">steps (2 and 3 cols)</label>
+						<input type="radio" name="grid" class="radio_grid_type" id="radio_grid_3" value="steps">
+					</div>
+					<div class="col">
+						<label for="radio_grid_4">img_cell (2 and 3 cols)</label>
+						<input type="radio" name="grid" class="radio_grid_type" id="radio_grid_4" value="img_cell">
+					</div>
+					<div class="col">
+						<label for="radio_grid_5">big_little_vert (2 and 3 cols)</label>
+						<input type="radio" name="grid" class="radio_grid_type" id="radio_grid_5" value="big_little_vert">
+					</div>
 				</div>
 			</form>
 		</div>

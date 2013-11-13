@@ -15,4 +15,8 @@ $('.radio_info_vertical').on('click', function(){
 	.addClass('products_'+ this.value);
 });
 
+$('.radio_grid_type').on('click', function(){
+	$( ".products" ).removeClass('products_big_little products_2_plus_1 products_steps products_img_cell products_big_little_vert')
+	.addClass('products_'+ this.value);
+});
 });

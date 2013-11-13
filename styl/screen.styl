@@ -143,9 +143,13 @@ html{
   }
 }
 
-.product_steps{
+.products_steps{
   .product{
     float: left;
+  }
+  img{
+    max-height: 100%;
+    vertical-align: bottom;
   }
   &.products_col_2{
     .product:nth-child(2){
@@ -157,10 +161,6 @@ html{
     .product__img{
       height: 265px;
       line-height: 265px;
-      img{
-        max-height: 265px;
-        vertical-align: bottom;
-      }
     }
   }
   &.products_col_3{
@@ -186,10 +186,6 @@ html{
     .product__img{
       height: 165px;
       line-height: 165px;
-      img{
-        max-height: 165px;
-        vertical-align: bottom;
-      }
     }
   }
 }
@@ -222,7 +218,7 @@ html{
   .product{
     float: left;
   }
-  .product:nth-child(3n+4){
+  .product:nth-child(6n+1){
     float: right;
   }
   .product__img{
