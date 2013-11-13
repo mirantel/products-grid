@@ -15,9 +15,9 @@ html{background:#999;font-family:'Lato',sans-serif}
 .products_col_1 .product{width:100%}
 .products_col_2 .product{width:50%}
 .products_col_3 .product{width:33%}
-.products_info_below{margin-top:-45px;padding-bottom:60px;}
-.products_info_below .product{vertical-align:top;padding-top:69px;margin-top:45px;position:relative}
-.products_info_below .product__info{position:absolute;top:0;left:15px;right:15px;margin:0}
+.products_info_above{margin-top:-45px;padding-bottom:60px;}
+.products_info_above .product{vertical-align:top;padding-top:69px;margin-top:45px;position:relative}
+.products_info_above .product__info{position:absolute;top:0;left:15px;right:15px;margin:0}
 .products_big_little.products_col_2 .product:nth-child(3n+3){width:100%}
 .products_big_little.products_col_3 .product:nth-child(4n+4){width:100%}
 .products_2_plus_1 .product:nth-child(4n+1),.products_2_plus_1 .product:nth-child(4n+4){width:66%}
