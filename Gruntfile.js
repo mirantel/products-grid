@@ -14,13 +14,23 @@ grunt.initConfig({
 		}
 	},
 
+	autoprefixer: {
+        options: {
+             browsers: ['last 3 version', 'ie >= 8']
+        },
+        files: {
+            src: 'css/screen.css'
+        },
+    },
+
 	watch: {
 		files: 'styl/*.styl',
-		tasks: ['stylus'],
+		tasks: ['stylus', 'autoprefixer'],
 	},
 });
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-stylus');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 
 	grunt.registerTask( 'default', ['watch']);
 };
