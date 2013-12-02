@@ -1,20 +1,20 @@
 $(document).ready(function() {
 
 $('.radio_info').on('click', function(){
-	$( ".products" ).removeClass('products_info_left products_info_center products_info_right')
-	.addClass('products_'+ this.value);
+	$( ".grid-products" ).removeClass('grid-products_info-left grid-products_info-center grid-products_info-right')
+	.addClass('grid-products_'+ this.value);
 });
 
 $('.fix-height').change( function(){
-	$( ".products" ).toggleClass("products_fix_height", this.checked);
+	$( ".grid-products" ).toggleClass("grid-products_fix-height", this.checked);
 });
 
 $('.grid-bg').change( function(){
-	$( ".products" ).toggleClass("products_grid_bg", this.checked);
+	$( ".grid-products" ).toggleClass("grid-products_add-bg", this.checked);
 });
 
-$('.radio_grid_type').on('click', function(){
-	$( ".products" ).removeClass('products_grid_1 products_grid_2 products_grid_3 products_grid_4 products_grid_5 products_grid_6 products_grid_7 products_grid_8')
-	.addClass('products_'+ this.value);
+$('.radio_grid-type').on('click', function(){
+	$( ".grid-products" ).removeClass('grid-products_type-1 grid-products_type-2 grid-products_type-3 grid-products_type-4 grid-products_type-5 grid-products_type-6 grid-products_type-7 grid-products_type-8')
+	.addClass('grid-products_'+ this.value);
 });
 });

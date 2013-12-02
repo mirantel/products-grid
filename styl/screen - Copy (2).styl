@@ -78,7 +78,7 @@ body{
 }
 
 
-.grid-products{
+.products{
   margin: 0;
   padding: 25px;
   list-style: none;
@@ -91,20 +91,27 @@ body{
   }
 }
 
-.grid-product{
+.product{
   display: inline-block;
   box-sizing: border-box;
   margin-bottom: $h_gap;
   padding: 0 ($h_gap/2);
   vertical-align: bottom;
+
+  &:hover{
+    .product__img img{
+      width: auto;
+      height: auto;
+    }
+  }
 }
 
-.grid-product__hold{
+.product__hold{
   display: table;
   width: 100%;
 }
 
-.grid-product__img{
+.product__img{
   display: table-cell;
   img{
     max-width: 100%;
@@ -112,30 +119,30 @@ body{
   }
 }
 
-.grid-product__info{
+.product__info{
   display: table-row;
   font-size: 14px;
   line-height:  1.358em; // 1.357em
 }
-.grid-product__name{
+.product__name{
   font-style: italic;
   padding-top: 10px;
 }
-.grid-product__price{
+.product__price{
   font-weight: bold;
 }
 
-.grid-product__hotspot-hold{
+.product__hotspot-hold{
   position: relative;
   display: inline-block;
   cursor: pointer;
 
-  &:hover .grid-product__hotspot{
+  &:hover .product__hotspot{
     display: block;
   }
 }
 
-.grid-product__hotspot{
+.product__hotspot{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -170,56 +177,45 @@ body{
 }
 
 
-.grid-products_add-bg{
-  .grid-product{
+.products_grid_bg{
+  .product{
     background: content-box #e2e2e2;
   }
 
-  .grid-product__img{
+  .product__img{
     background: #f2f2f2;
   }
 }
 
-.grid-products_info-left .grid-product__info{
+.products_info_left .product__info{
   text-align: left;
 }
 
-.grid-products_info-right .grid-product__info{
+.products_info_right .product__info{
   text-align: right;
 }
 
-.grid-products_info-center .grid-product__info{
+.products_info_center .product__info{
   text-align: center;
 }
 
 
-.grid-product_vertical-top{
-  vertical-align: top;
-}
-.grid-product_vertical-middle{
-  vertical-align: middle;
-}
-.grid-product_vertical-bottom{
-  vertical-align: bottom;
-}
-
-
 // |__|__|
 // |__|__|
 // |__|__|
 // |__|__|
 
-.grid-products_type-1{
-  .grid-product{
+.products_grid_1{
+  .product{
     width: 50%;
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 265px;
   }
 
-  &.grid-products_fix-height{
-    .grid-product__img{
+  &.products_fix_height{
+    .product__img{
       height: 265px;
       vertical-align: bottom;
 
@@ -235,25 +231,25 @@ body{
 // |__|__|
 // |_____|
 
-.grid-products_type-2{
-  .grid-product{
+.products_grid_2{
+  .product{
     width: 50%;
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 265px;
   }
 
-  .grid-product_6-3, .grid-product_6-6{
+  .product_6-3, .product_6-6{
     width: 100%;
 
-    .grid-product__hotspot-hold{
+    .product__hotspot-hold{
       max-width: 560px;
     }
   }
 
-  &.grid-products_fix-height{
-    .grid-product__img{
+  &.products_fix_height{
+    .product__img{
       height: 265px;
       vertical-align: bottom;
 
@@ -269,25 +265,25 @@ body{
 // |  |__|
 // |__|__|
 
-.grid-products_type-3{
-  .grid-product{
+.products_grid_3{
+  .product{
     float: left;
     width: 50%;
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 265px;
   }
 
-  .grid-product_6-1{
+  .product_6-1{
     float: right;
   }
 
-  .grid-product__info{
+  .product__info{
     height: $line-height * 3 + 10px;
   }
 
-  .grid-product__img{
+  .product__img{
     vertical-align: middle;
     height: 265px;
 
@@ -296,11 +292,11 @@ body{
     }
   }
 
-  .grid-product_6-1,
-  .grid-product_6-4{
+  .product_6-1,
+  .product_6-4{
     clear: both;
 
-    .grid-product__img{
+    .product__img{
       height: $h_2*2 + $h_gap + $line-height * 3 + 10px;
 
       img{
@@ -309,11 +305,11 @@ body{
     }
   }
 
-  .grid-product_6-1:last-child,
-  .grid-product_6-4:last-child{
+  .product_6-1:last-child,
+  .product_6-4:last-child{
     width 100%
 
-    .grid-product__img{
+    .product__img{
       height: 265px;
 
       img{
@@ -330,17 +326,17 @@ body{
 // |   |_|
 // |___|_|
 
-.grid-products_type-4{
-  .grid-product{
+.products_grid_4{
+  .product{
     float: left;
     width: 33%;
   }
 
-  .grid-product_6-1{
+  .product_6-1{
     float: right;
   }
 
-  .grid-product__img{
+  .product__img{
     vertical-align: middle;
 
     img{
@@ -348,29 +344,29 @@ body{
     }
   }
 
-  .grid-product__info{
+  .product__info{
     height: $line-height * 4 + 10px;
   }
 
-  .grid-product__img,
-  .grid-product_6-1:last-child .grid-product__img,
-  .grid-product_6-4:last-child .grid-product__img{
+  .product__img,
+  .product_6-1:last-child .product__img,
+  .product_6-4:last-child .product__img{
     height: 165px;
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 165px;
   }
 
-  .grid-product_6-1, .grid-product_6-4{
+  .product_6-1, .product_6-4{
     width: 66%;
     clear: both;
 
-    .grid-product__hotspot-hold{
+    .product__hotspot-hold{
       max-width: 359px;
     }
 
-    .grid-product__img{
+    .product__img{
       height: $h_3*2 + $h_gap + $line-height * 4 + 10px;
 
       img{
@@ -379,8 +375,8 @@ body{
     }
   }
 
-  .grid-product_6-1:last-child,
-  .grid-product_6-4:last-child{
+  .product_6-1:last-child,
+  .product_6-4:last-child{
     width: 100%;
   }
 }
@@ -392,18 +388,18 @@ body{
 // |_|_|_|
 // |_|_|_|
 
-.grid-products_type-5{
-  .grid-product{
+.products_grid_5{
+  .product{
     width: 33%;
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 165px;
   }
 
-  &.grid-products_fix-height{
+  &.products_fix_height{
 
-    .grid-product__img{
+    .product__img{
       vertical-align: bottom;
       height: 165px;
 
@@ -421,25 +417,25 @@ body{
 // |_|_|_|
 // |_____|
 
-.grid-products_type-6{
-  .grid-product{
+.products_grid_6{
+  .product{
     width: 33%;
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 165px;
   }
 
-  .grid-product_4-4{
+  .product_4-4{
     width: 100%;
 
-    .grid-product__hotspot-hold{
+    .product__hotspot-hold{
       max-width: 560px;
     }
   }
 
-  &.grid-products_fix-height{
-    .grid-product__img{
+  &.products_fix_height{
+    .product__img{
       vertical-align: bottom;
       height: 165px;
 
@@ -457,27 +453,27 @@ body{
 // |___|_|
 // |_|___|
 
-.grid-products_type-7{
-  .grid-product_4-1,
-  .grid-product_4-4{
+.products_grid_7{
+  .product_4-1,
+  .product_4-4{
     width: 66%;
 
-    .grid-product__hotspot-hold{
+    .product__hotspot-hold{
       max-width: 359px;
     }
   }
 
-  .grid-product_4-2,
-  .grid-product_4-3{
+  .product_4-2,
+  .product_4-3{
     width: 33%;
 
-    .grid-product__hotspot-hold{
+    .product__hotspot-hold{
       max-width: 165px;
     }
   }
 
-  &.grid-products_fix-height{
-    .grid-product__img{
+  &.products_fix_height{
+    .product__img{
       height: 165px;
 
       img{
@@ -486,8 +482,8 @@ body{
     }
   }
 
-  .grid-product_4-1:last-child,
-  .grid-product_4-3:last-child{
+  .product_4-1:last-child,
+  .product_4-3:last-child{
     width: 100%;
   }
 }
@@ -499,18 +495,18 @@ body{
 // |_|_|_|
 // |_| |_|
 
-.grid-products_type-8{
+.products_grid_8{
   vertical-align: top;
-  .grid-product{
+  .product{
     width: 33%;
     vertical-align: top !important;
   }
 
-  .grid-product__info{
+  .product__info{
     min-height: $line-height * 5;
   }
 
-  .grid-product__img{
+  .product__img{
     height: 165px;
     line-height: 165px;
 
@@ -519,33 +515,33 @@ body{
     }
   }
 
-  .grid-product__hotspot-hold{
+  .product__hotspot-hold{
     max-width: 165px;
   }
 
-  .grid-product_6-1, .grid-product_6-3,
-  .grid-product_6-4,.grid-product_6-6 {
+  .product_6-1, .product_6-3,
+  .product_6-4,.product_6-6 {
     margin: 110px 0 -80px;
   }
 
-  .grid-product_6-5:last-child{
+  .product_6-5:last-child{
     margin-top: 30px;
   }
 
-  .grid-product_6-1:last-child,
-  .grid-product_6-4:last-child {
+  .product_6-1:last-child,
+  .product_6-4:last-child {
     margin: 0;
   }
 
-  .grid-product_6-2:last-child,
-  .grid-product_6-5:last-child {
+  .product_6-2:last-child,
+  .product_6-5:last-child {
     margin-right: 33%;
     margin-bottom: 110px;
     margin-top: 0;
   }
 
-  .grid-product_6-3:last-child,
-  .grid-product_6-6:last-child {
+  .product_6-3:last-child,
+  .product_6-6:last-child {
     margin-bottom: 0;
   }
 }
